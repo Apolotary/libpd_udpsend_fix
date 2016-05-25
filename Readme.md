@@ -4,12 +4,12 @@ I posted this fix on createdigitalnoise.com forum two years ago, but since then 
 
 ##Problem
 
-Back then if you use updsend on PC to send data to updreceive on mobile, you will get a lot of jittering and interruptions, there's something odd with
-scheduling, so after going through mailing lists for months, I found this solution (i.e. replace methods that came in libpd sources with the ones I've found).
+Back then if you use updsend on PC to send data to updreceive on mobile, you will get a lot of jittering and interruptions. It seems like there's something odd with
+scheduling, and there's no straightforward solution. It took me two months of going through mailing lists to find a code snippet that could fix it.
 
-Honestly, I don't remember which methods needed to be replaced (my guess is sched_tick.c), so I just saved the files code in which I replaced.
+Honestly, I don't remember which methods needed to be replaced (my guess is sched_tick.c), so I just saved the files which I used for replacement.
 
-Two years ago when I posted that, I remember hearing that this problem got fixed long ago, but two years after I encountered the same issue with libpd 0.8.3, so I figured I just post it here for future releases.
+One more thing, when I posted that two years ago, I remember hearing that this problem got fixed long ago. As you can see, two years after I still have the same issue with libpd 0.8.3, so I figured I just post it here for future releases.
 
 ##How to use
 Just go to libpd directory in Pods (or whichever way you installed it), replace the files with the ones I have here, clean your build and recompile.
